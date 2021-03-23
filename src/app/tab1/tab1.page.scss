@@ -1,0 +1,47 @@
+ion-card{
+    height: 845px;
+    width: 525px;
+    box-shadow: none;
+}
+
+ion-icon{
+    padding: 0 5px;
+    height: 24px;
+    width: 24px;
+}
+
+ion-card-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ion-card-header{
+    height: 40px;
+}
+
+.post-description{
+    // overflow: scroll;
+}
+
+.username-header{
+    font-size: 16px;
+    display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.img{
+    height: 525px;
+    width: 525px;
+}
+
+.home-feed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interaction-toolbar{
+    padding: 0 20px;
+    height: 40px;
+}

@@ -1,0 +1,68 @@
+ion-card{
+    height: 525px;
+    width: 525px;
+}
+
+ion-icon{
+    padding: 0 5px;
+}
+
+ion-card{
+    padding: 50px 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ion-toolbar{
+    display: flex;
+    flex-direction: row;
+}
+
+ion-title{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.create-post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ion-input{
+    max-width: 50vw;
+    max-height: 10vh;
+}
+
+.img{
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-name-text{
+    font-weight: bold;
+}
+
+.user-bio-text{
+
+}
+
+.settings-button{
+    --ion-color-step-550: #85898c;
+}

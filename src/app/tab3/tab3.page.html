@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+    </ion-header>
+
+    <div class="profile-content">
+        <ion-card fill="none">
+              <img class="img" src="assets/images/sampleProfile.jpg" />
+
+              <div class="profile-text">
+                  <ion-card-header>
+                    <ion-card-title class="user-name-text">FirstName LastName</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content class="user-bio-text">
+                    Here will go a biography written by the user.
+                    The seetings icon below will be clickable and will allow users to edit their profile picture, name, and description. The toolbar below with "posts" and "saved" will also be clickable, and will display corresponding grids of iamges when clicked. Each image will also be clickable, and will display the full post when clicked.
+                  </ion-card-content>
+
+                  <ion-button fill="clear" class="settings-button">
+                      <ion-icon size="large" name="settings-outline">
+                  </ion-icon></ion-button>
+              </div>
+        </ion-card>
+
+        <ion-toolbar class="profile-img-switch">
+          <div>Posts</div>
+          <div>Saved</div>
+        </ion-toolbar>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col >
+              <img class="profile-grid-img" src="assets/images/sampleChair.jpg" />
+            </ion-col>
+            <ion-col > 
+              <img class="profile-grid-img" src="assets/images/sampleChair.jpg" />
+            </ion-col>
+            <ion-col >
+              <img class="profile-grid-img" src="assets/images/sampleChair.jpg" />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </div>
+    
+
+</ion-content>
