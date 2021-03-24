@@ -2,10 +2,24 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  //---DEFAULT------
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  // }
+  //---DEFAULT------
+
+  //---LOGIN UPON SITE OPEN-----
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
   {
-    path: '',
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.loginPageModule)
+  },
+  //---LOGIN UPON SITE OPEN-----
 ];
 @NgModule({
   imports: [
