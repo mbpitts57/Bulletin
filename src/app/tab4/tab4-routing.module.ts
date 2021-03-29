@@ -4,7 +4,8 @@ import { Tab4Page } from './tab4.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login', loadChildren: () => import('../login/login.module').then(m => m.loginPageModule),
+    redirectTo: 'login', pathMatch: 'full',
     component: Tab4Page,
   }
 ];

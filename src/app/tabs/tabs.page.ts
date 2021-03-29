@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from "../shared/authentication-service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(
+    private route: Router,
+    public authService: AuthenticationService
+  ) {}
 
+  toRegPage(){
+    console.log('redirecting to registration page');
+    this.route.navigateByUrl("../registration/registration.page.html");
+  }
 }

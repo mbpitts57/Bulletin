@@ -1,22 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-// import { LoginComponent } from './login/login.component';
+
+import { Component,OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss']
+  styleUrls: ['./login.page.scss'],
 })
-export class loginPage implements OnInit {
 
-  constructor(private router: Router) {}
+export class LoginPage implements OnInit {
 
-  ngOnInit(){
+  constructor(
+    public authService: AuthenticationService,
+    public router: Router
+  ) {}
 
+  ngOnInit() {}
+
+  logIn(email, password) {
+    this.authService.SignIn(email.value, password.value)
+      .then((res) => {
+        if(this.authService.isEmailVerified) {
+          this.router.navigate(['/tabs']);          
+        } else {
+          window.alert('Email is not verified')
+          return false;
+        }
+      }).catch((error) => {
+        window.alert(error.message)
+      })
   }
+  // login(){
+  //   this.router.navigate(['/tabs']);
+  //   console.log("login redirect");
+  // }
 
-  login(){
-    this.router.navigate(['/tabs']);
-    console.log("login redirect");
-  }
 }
