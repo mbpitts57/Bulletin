@@ -3,22 +3,26 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   //---DEFAULT------
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  // }
   //---DEFAULT------
 
   //---LOGIN UPON SITE OPEN-----
-  // { path: '', redirectTo: 'login', pathMatch: 'full'},
-  // {
-  //   path: 'tabs',
-  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  // },
-  // {
-  //   path: 'login',
-  //   loadChildren: () => import('./login/login.module').then(m => m.loginPageModule)
-  // },
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.loginPageModule)
+  },  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+
   //---LOGIN UPON SITE OPEN-----
 ];
 @NgModule({

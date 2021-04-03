@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section>
+    <ion-button (click)="createAccount()">Register</ion-button>
+    <ion-button (click)="login()">login</ion-button>
+    <ion-button (click)="logout()">Logout</ion-button>
+  </section>
+  
+  <ng-template #loginItems>
+    <h1>login pls</h1>
+    <ion-item>
+      <ion-label>
+        email
+      </ion-label>
+      <ion-input [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>
+        password
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ng-template>
+</ion-content>
