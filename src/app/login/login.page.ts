@@ -1,22 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-// import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss']
+  styleUrls: ['./login.page.scss'],
 })
-export class loginPage implements OnInit {
+export class LoginPage implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor() { }
 
-  ngOnInit(){
-
+  ngOnInit() {
   }
 
-  login(){
-    this.router.navigate(['/tabs']);
-    console.log("login redirect");
-  }
 }
