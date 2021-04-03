@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 interface User {
   email?: string;
@@ -19,8 +20,12 @@ export class loginPage {
     password: 'finnismath',
   };
 
-  constructor( public afAuth: AngularFireAuth) {}
+  constructor(public afAuth: AngularFireAuth, private router: Router) {}
   
+  navtosignup(){
+    this.router.navigate(['/signup'])
+  }
+
   async createAccount(){
     const user = await this.afAuth.createUserWithEmailAndPassword(
       this.user.email,

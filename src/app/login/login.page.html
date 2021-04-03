@@ -18,7 +18,10 @@
 
 <section>
   <ion-button (click)="createAccount()">Register</ion-button>
-  <ion-button (click)="login()">login</ion-button>
+  <!-- if login is successful nav to tab1. if not, show error message. -->
+  <ion-button (click)="login()" [routerLink]="['/tab1']">login</ion-button>
+  <!-- don't have an account? click here. nav to signup page -->
+  <ion-button (click)="navtosignup()">Click here.</ion-button>
   <ion-button (click)="logout()">Logout</ion-button>
 </section>
 
